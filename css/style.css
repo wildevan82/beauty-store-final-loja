@@ -868,3 +868,18 @@ footer {
     font-size: 1rem;
     color: #27ae60;
 }
+/* Configuração para telas de celular */
+@media (max-width: 768px) {
+    .hero {
+        height: 300px; /* Diminui o banner no celular */
+    }
+    
+    .product-grid {
+        grid-template-columns: 1fr 1fr; /* Coloca 2 produtos por linha em vez de 4 */
+        gap: 10px;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+}
