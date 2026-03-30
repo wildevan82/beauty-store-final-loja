@@ -868,58 +868,48 @@ footer {
     font-size: 1rem;
     color: #27ae60;
 }
-/* Configuração para telas de celular */
+/* --- AJUSTE TOTAL PARA CELULAR --- */
 @media (max-width: 768px) {
-    .hero {
-        height: 300px; /* Diminui o banner no celular */
-    }
-    
-    .product-grid {
-        grid-template-columns: 1fr 1fr; /* Coloca 2 produtos por linha em vez de 4 */
-        gap: 10px;
-    }
-
-    .container {
-        padding: 0 15px;
-    }
-}
-/* --- AJUSTES PARA CELULAR (RESPONSIVIDADE) --- */
-@media (max-width: 768px) {
-    
-    /* 1. Ajusta o Topo (Header) para não esmagar os links */
-    header .container {
-        flex-direction: column;
-        padding: 15px;
-        gap: 15px;
-    }
-
-    nav ul {
-        gap: 10px;
-        font-size: 0.8rem; /* Letras um pouco menores para caber */
-    }
-
-    /* 2. Ajusta o Banner Principal (Hero) para não cortar o texto */
-    .hero {
-        height: auto;
-        min-height: 350px;
-        padding: 60px 20px;
-        background-attachment: scroll; /* Melhora o desempenho no celular */
-    }
-
-    .hero-content h1 {
-        font-size: 1.8rem; /* Diminui o tamanho da letra do título */
-    }
-
-    /* 3. Ajusta a vitrine de produtos (O mais importante!) */
-    .product-grid {
-        grid-template-columns: 1fr; /* Um produto embaixo do outro */
-        gap: 20px;
-        padding: 10px;
-    }
-
-    /* 4. Garante que as imagens não "vazem" da tela */
-    .product-card img {
+    /* 1. Impede o site de balançar para os lados */
+    html, body {
+        overflow-x: hidden;
         width: 100%;
-        height: auto;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* 2. Ajusta o Banner (Hero) */
+    .hero {
+        height: auto !important;
+        padding: 60px 20px !important;
+        background-attachment: scroll !important; /* Importante para celular */
+    }
+
+    .hero h1 {
+        font-size: 1.8rem !important;
+        line-height: 1.2;
+    }
+
+    /* 3. COLOCAR PRODUTOS EM UMA COLUNA (O que está quebrando o site) */
+    .product-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 30px !important;
+        padding: 20px !important;
+    }
+
+    .product-card {
+        width: 100% !important;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    /* 4. Ajusta o Menu */
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        padding: 0;
     }
 }
