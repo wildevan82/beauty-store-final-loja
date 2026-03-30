@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | Beauty Store Elite</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="checkout-page">
+
+    <header class="minimal-header">
+        <div class="container">
+            <a href="index.html" class="back-link">← Voltar para a Loja</a>
+            <h2>Sua Bolsa de Beleza</h2>
+        </div>
+    </header>
+
+    <main class="container checkout-container">
+        <section class="order-column">
+            <div class="card-checkout">
+                <h3>Resumo do Pedido</h3>
+                <div id="order-summary" class="summary-list">
+                    </div>
+            </div>
+        </section>
+
+        <section class="form-column">
+            <div class="card-checkout">
+                <h3>Dados de Entrega</h3>
+                <p class="form-subtitle">Finalize seu pedido via WhatsApp para atendimento personalizado.</p>
+                
+                <div class="input-group">
+                    <label for="name">Nome Completo</label>
+                    <input type="text" id="name" placeholder="Como deseja ser chamada?">
+                </div>
+
+                <div class="input-group">
+                    <label for="phone">WhatsApp</label>
+                    <input type="text" id="phone" placeholder="(00) 00000-0000">
+                </div>
+
+                <div class="input-group">
+                    <label for="address">Endereço de Entrega</label>
+                    <input type="text" id="address" placeholder="Rua, número, bairro e cidade">
+                </div>
+
+                <button id="finish" class="btn-finish">
+                    Finalizar Pedido via WhatsApp
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <script type="module" src="js/checkout.js"></script>
+</body>
+</html>

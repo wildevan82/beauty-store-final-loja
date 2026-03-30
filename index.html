@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-Frame-Options" content="DENY">
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+<title>Beauty Store | Curadoria de Luxo</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <header>
+    <div class="container">
+      <h2>💄 Beauty Store</h2>
+      <nav>
+        <ul>
+          <li><a href="#home">Início</a></li>
+          <li><a href="#products">Produtos</a></li>
+          <li><a href="#cart">Carrinho (<span id="cart-count">0</span>)</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="home" class="hero">
+    <div class="container">
+      
+      <div class="hero-content">
+        <h1>Beleza Única para Você</h1>
+        <p>Descubra o luxo de ser você mesma com nossa curadoria exclusiva.</p>
+        <a href="#products" class="btn-hero">Descobrir Coleção</a>
+      </div>
+
+      <div class="hero-featured-slider">
+        <div class="slider-track">
+          <div class="featured-item">
+            <img src="images/product1.jpg" alt="Destaque">
+            <span>Batom Velvet</span>
+          </div>
+          <div class="featured-item">
+            <img src="images/product02.jpg" alt="Destaque">
+            <span>Base Serum</span>
+          </div>
+          <div class="featured-item">
+            <img src="images/product03.jpg" alt="Destaque">
+            <span>Gloss Glow</span>
+          </div>
+          <div class="featured-item"><img src="images/product1.jpg" alt=""><span>Batom Velvet</span></div>
+          <div class="featured-item"><img src="images/product2.jpg" alt=""><span>Base Serum</span></div>
+          <div class="featured-item"><img src="images/product3.jpg" alt=""><span>Gloss Glow</span></div>
+        <div class="payment-item">
+   
+
+    </div>
+  </section>
+
+  <section id="products" class="products">
+    <div class="container">
+      <h2>Produtos em Destaque</h2>
+
+      <div class="filters-bar">
+        <div class="search-wrapper">
+          <i class="fas fa-search"></i>
+          <input type="text" id="search" placeholder="Buscar produtos...">
+        </div>
+
+        <div class="category-wrapper">
+          <span>Filtrar:</span>
+          <select id="category-filter">
+            <option value="all">Todos</option>
+            <option value="batom">Batom</option>
+            <option value="pele">Pele</option>
+            <option value="olhos">Olhos</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="product-grid"></div>
+
+    </div>
+  </section>
+
+  <section id="cart" class="cart-section">
+    <div class="container">
+      <h2>Seu Carrinho</h2>
+      
+      <div id="cart-items" class="cart-items-container">
+        <p class="empty-msg">Seu carrinho está vazio 🛍️</p>
+      </div>
+
+      <div class="cart-footer">
+        <h3>Total: R$ <span id="cart-total-amount">0.00</span></h3>
+        <button id="checkout-btn" class="add-btn" disabled>Finalizar Compra</button>
+      </div>
+    </div>
+    <div class="payment-methods">
+    <p class="payment-title">Formas de Pagamento</p>
+   
+        <div class="payment-item">
+    <div class="pix-wrapper">
+        <i class="fa-brands fa-pix"></i> 
+    </div>
+    <span>Pix <span class="pix-discount">5% OFF</span></span>
+</div>
+        <div class="payment-item">
+            <div class="card-icons">
+                <i class="fab fa-cc-visa"></i>
+                <i class="fab fa-cc-mastercard"></i>
+                <i class="fab fa-cc-amex"></i>
+            </div>
+            <span>Cartão em até 6x</span>
+        </div>
+    </div>
+    <div class="security-badges">
+    <div class="badge-item">
+        <i class="fas fa-shield-alt"></i>
+        <span>Site Criptografado</span>
+    </div>
+    <div class="badge-item">
+        <i class="fas fa-check-circle"></i>
+        <span>Google Safe Browsing</span>
+    </div>
+    <div class="badge-item">
+        <i class="fas fa-lock"></i>
+        <span>Pagamento 100% Seguro</span>
+    </div>
+</div>
+    
+    <p class="secure-checkout">
+        <i class="fas fa-lock"></i> Ambiente seguro e criptografado
+    </p>
+</div>
+
+  </section>
+
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <div class="contact-wrapper">
+        
+        <button class="btn-reveal" onclick="revealContactForm()">
+          Como podemos ajudar? <i class="fas fa-comment-dots" style="margin-left: 10px;"></i>
+        </button>
+
+        <form id="contact-form" class="hidden-form">
+          <h3>Envie sua mensagem</h3>
+          <input type="text" placeholder="Seu Nome" required>
+          <input type="email" placeholder="Seu E-mail" required>
+          <textarea placeholder="No que você está pensando?" rows="4" required></textarea>
+          <button type="submit" class="add-btn">Enviar Agora</button>
+        </form>
+
+      </div>
+    </div>
+  </section>
+  <div id="auth-modal" class="modal">
+  <div class="modal-content">
+    <h3>Seja bem vindo 💄</h3>
+    <p>Para continuar com sua compra,Faca seu cadastro em nossa loja.</p>
+    <form id="auth-form">
+      <input type="text" id="username" placeholder="Seu Nome" required>
+      <input type="email" id="email" placeholder="Seu E-mail" required>
+      <button type="submit" class="add-btn">Acessar Loja</button>
+    </form>
+  </div>
+</div>
+
+  <footer>
+    <div class="container">
+      <div class="social-links">
+        <a href="https://wa.me/5511999998888?text=Olá!%20Gostaria%20de%20saber%20mais." target="_blank" aria-label="WhatsApp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </div>
+      
+      <p style="margin-top: 25px; font-size: 0.7rem; color: #888; text-transform: uppercase; letter-spacing: 2px;">
+        © 2026 Beauty Store Elite
+      </p>
+    </div>
+  </footer>
+
+  <script type="module" src="js/app.js"></script>
+
+</body>
+</html>

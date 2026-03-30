@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalhes do Produto | Beauty Store</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="product-details-body">
+
+<header class="minimal-header">
+  <div class="container">
+    <a href="index.html" class="back-button"><i class="fas fa-arrow-left"></i> Voltar para a vitrine</a>
+  </div>
+</header>
+
+<main class="container product-page-container">
+  
+  <div class="product-image-column">
+    <img id="product-image" alt="Carregando imagem...">
+  </div>
+
+  <div class="product-info-column">
+    <div class="product-sticky-info">
+      <span class="product-category-label">Exclusivo Beauty Store</span>
+      <h1 id="product-name">Nome do Produto</h1>
+      <p id="product-price" class="product-detail-price">R$ 0,00</p>
+      
+      <div class="product-description-box">
+        <h3>Sobre o produto</h3>
+        <p id="product-description">
+          Uma fórmula exclusiva desenvolvida para realçar sua beleza natural com sofisticação e durabilidade.
+        </p>
+      </div>
+
+      <button id="add-btn" class="btn-primary-large">
+        Adicionar à Bolsa ✨
+      </button>
+
+      <div class="product-benefits">
+        <p><i class="fas fa-truck-fast"></i> Entrega rápida em todo o Brasil</p>
+        <p><i class="fas fa-shield-halved"></i> Compra segura via WhatsApp</p>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<script type="module" src="js/productPage.js"></script>
+
+</body>
+</html>
