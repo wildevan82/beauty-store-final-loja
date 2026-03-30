@@ -883,3 +883,43 @@ footer {
         padding: 0 15px;
     }
 }
+/* --- AJUSTES PARA CELULAR (RESPONSIVIDADE) --- */
+@media (max-width: 768px) {
+    
+    /* 1. Ajusta o Topo (Header) para não esmagar os links */
+    header .container {
+        flex-direction: column;
+        padding: 15px;
+        gap: 15px;
+    }
+
+    nav ul {
+        gap: 10px;
+        font-size: 0.8rem; /* Letras um pouco menores para caber */
+    }
+
+    /* 2. Ajusta o Banner Principal (Hero) para não cortar o texto */
+    .hero {
+        height: auto;
+        min-height: 350px;
+        padding: 60px 20px;
+        background-attachment: scroll; /* Melhora o desempenho no celular */
+    }
+
+    .hero-content h1 {
+        font-size: 1.8rem; /* Diminui o tamanho da letra do título */
+    }
+
+    /* 3. Ajusta a vitrine de produtos (O mais importante!) */
+    .product-grid {
+        grid-template-columns: 1fr; /* Um produto embaixo do outro */
+        gap: 20px;
+        padding: 10px;
+    }
+
+    /* 4. Garante que as imagens não "vazem" da tela */
+    .product-card img {
+        width: 100%;
+        height: auto;
+    }
+}
